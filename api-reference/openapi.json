@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "OpenAPI Plant Store",
-    "description": "A sample API that uses a plant store as an example to demonstrate features in the OpenAPI specification",
+    "title": "Ascent Bio MDESIGN API",
+    "description": "An API that creates a programmatic interface for molecule design",
     "license": {
       "name": "MIT"
     },
@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "http://sandbox.mintlify.com"
+      "url": "https://ec1340--ab-design-apiv2-01-design-inference.modal.run"
     }
   ],
   "security": [

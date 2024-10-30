@@ -1,0 +1,52 @@
+---
+openapi: post /v1/design
+description: "An API for fast molecule design"
+---
+
+
+# Introduction
+Our model enables fast, multi-property optimization compared to many off-the-shelf options.
+
+### API Features
+<Card title="Mult-Property Optimization" icon="check" iconType="duotone" color="green">
+  Current version allows for up to 5 properties to be optimized at a time
+</Card>
+<Card title="Ultra-fast design" icon="check" iconType="duotone" color="green">
+  Achieve >10s molecule generation with our base model 
+</Card>
+<Card title="Realistic Molecules" icon="check" iconType="duotone" color="green">
+  Molecule designs are returned with the checks and rationales
+</Card>
+
+
+---
+
+
+# Quick Start
+
+### Authentication
+In order to use our API you need to get your `ascent-api-key` first. This will be available in your profile settings. 
+
+## Molecule Design
+Generate molecule designs with a simple request like the following Python example:
+
+```python
+import requests
+
+url = "https://api.ascentbio.xyz/v1/design"
+
+headers = {
+  "Content-Type": "application/json",
+  "ascent-api-key": "<ascent-api-key>"
+}
+
+data = {
+    "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+    "target_props": ["TPSA"],
+    "target_changes": [1]
+    "model_id": "ascentbio-v1-base-large",
+}
+
+response = requests.post(url, json=data, headers=headers)
+```
+
