@@ -3,6 +3,56 @@ title: 'Quickstart'
 description: 'Start designing molecules in minutes'
 ---
 
-Coming Soon
+# Quick & Simple Optimization of Chemical Properties
+
+One example of a property users may wish to optimize is logP, or the partition coefficient, which measures a molecule’s hydrophobicity.
+Adjusting logP is often a crucial step in drug design, as it influences a compound's ability to permeate cell membranes and its bioavailability.
+Higher logP values generally enhance a molecule’s lipophilicity, facilitating cell membrane passage, which is beneficial for improving oral absorption in pharmaceuticals.
+However, careful balancing is essential, as excessive logP can lead to solubility and toxicity issues. By fine-tuning properties like logP through the Ascent Bio API, users can design molecules that better meet therapeutic goals without sacrificing safety or solubility.
 
 
+# Step-by-Step Guide
+### Here's a step-by-step guide on how to use the Ascent Bio API to increase the logP of a molecule:
+---
+
+### Step 1: Define Your Target Molecule
+Begin by identifying the molecule you want to optimize using its SMILES representation.
+
+For example, if your starting molecule is represented by `CC(=O)OC1=CC=CC=C1C(=O)O`, this will be the value you provide in the "smiles" field. This SMILES string tells the API which molecular structure to take as the starting point for the optimization.
+
+### Step 2: Set the Target Property for Optimization
+
+Next, specify the property you want to modify and the desired direction of change.
+
+In this case, we aim to increase the molecule’s logP, a property that indicates the molecule’s hydrophobicity. 
+
+
+To do this, set `target_props: ["logP"]` in the request body. 
+The `target_changes` field allows you to indicate whether you want to increase or decrease this property; here, set `target_changes`: `[1]` to indicate an increase. 
+This signals to the API that the molecule should be optimized to have a higher logP value.
+
+
+### Step 3: Send the Request and Retrieve Results
+Finally, make a POST request to the API endpoint, providing your API key in the headers along with the SMILES string and target specifications in the body of the request. Here’s a sample code snippet:
+
+
+```python
+import requests
+url = "https://api.ascentbio.xyz/v1/design"
+headers = {
+    "Content-Type": "application/json",
+    "ascent-api-key": "<your-api-key>"
+}
+data = {
+    "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+    "target_props": ["logP"],
+    "target_changes": [1],
+    "model_id": "ascentbio-v1-base-large"
+}
+response = requests.post(url, json=data, headers=headers)
+optimized_molecule = response.json()
+print(optimized_molecule)
+```
+
+The API will return a modified SMILES string and associated data reflecting the optimized molecule. You can examine the response to verify that the logP value has increased as specified. This quick process enables you to efficiently adjust molecular properties to meet your design goals. 
+This walk-through is simply just one of many possibilities, but tuned for additional properties and features that will enable more specific property adjustments.
