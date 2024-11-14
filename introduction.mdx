@@ -1,21 +1,45 @@
 ---
 title: Introduction
-description: "Welcome to Ascent Bio's Documentation"
+description: "Explore our Guides and API Reference to get the most out of Ascent Bio"
 ---
 
-<img
-  className="block dark:hidden"
-  src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  alt="Hero Light"
-/>
-<img
-  className="hidden dark:block"
-  src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  alt="Hero Dark"
-/>
+## Welcome
+In this documentation we will help you get started with Ascent Bio.
+Ascent Bio is a platform for designing molecules and serves as a reasoning engine for molecular data.
+
 
 ## Setting up
-
 First step to using the molecule design platform is to sign up for an account. If you've been invited, following the instructions on the email. 
+While the platform is currently in closed alpha, please join our waiting list using our [homepage](https://www.ascentbio.xyz/alpha)
 
-While the platform is currently in closed beta, please join our waiting list using our [homepage](https://www.ascentbio.xyz/alpha)
+
+## Using the API
+We'll cover the the endpoints available in our platform, which allows you to perform different tasks vital to small molecule hit-to-lead workflow.
+
+The endpoints are organized into the following categories:
+- Design (Property Optimization)
+- Generate (Molecule Generation) (coming soon)
+
+<AccordionGroup>
+    <Accordion title="Design (Property Optimization)">
+
+        The Design endpoint enables optimization of chemical properties using our foundation model for small molecules. The model leverages latent space optimization, 
+        combined with extensive reference databases, to ensure high-quality outputs. 
+        
+        
+        The process is straightforward - simply provide a starting molecule and specify which property to optimize. 
+        Send this request to the **design** endpoint and receive candidate molecules within seconds.
+
+        We currently support optimization of `MolLogP`, `TPSA`, and `ExactMolWt`, `TPSA` and `qed`
+
+        <Card
+        title="API Documentation"
+        icon="rectangle-terminal"
+        horizontal="true"
+        href="/api-reference/endpoint/design"
+        ></Card>
+
+
+    </Accordion>
+
+</AccordionGroup>

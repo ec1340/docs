@@ -30,6 +30,15 @@ In order to use our API you need to get your `ascent-api-key` first. This will b
 ## Molecule Design
 Generate molecule designs with a simple request like the following Python example:
 
+
+## SMILES
+
+field | description
+--- | ---
+smiles | The SMILES representation of the molecule to be designed
+target_props | The properties to optimize for (one or more of `MolLogP`, `TPSA`, `ExactMolWt`, `qed`)
+target_changes | The number of changes to make to the molecule (`[1]` = increase, `[-1]` = decrease)
+
 ```python
 import requests
 
