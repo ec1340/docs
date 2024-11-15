@@ -41,19 +41,22 @@ Finally, make a POST request to the API endpoint, providing your API key in the 
 
 ```python
 import requests
-url = "https://api.ascentbio.xyz/v1/design"
+
+url = "https://ascentbio--ab-design-apiv3-01-design-inference.modal.run"
+
 headers = {
-    "Content-Type": "application/json",
-    "ascent-api-key": "<your-api-key>"
+  "Content-Type": "application/json",
+  "ascent-api-key": "YOUR_API_KEY"
 }
+
 data = {
     "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
-    "target_props": ["logP"],
-    "target_changes": [1],
-    "model_id": "ascentbio-v1-base-large"
+    "changes": {"qed": "increase"}
 }
+
 response = requests.post(url, json=data, headers=headers)
-optimized_molecule = response.json()
-print(optimized_molecule)
+
+print(response.status_code)
+print(response.json())
 ```
 The API will return a modified SMILES string and property values for the optimized molecule. You can verify that the logP has increased as requested. This same process can be used to optimize other molecular properties supported by the API.

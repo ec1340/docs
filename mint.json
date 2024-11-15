@@ -55,6 +55,12 @@
       ]
     },
     {
+      "group": "Design",
+      "pages": [
+        "api-reference/properties"
+      ]
+    },
+    {
       "group": "Endpoint Examples",
       "pages": [
         "api-reference/endpoint/design"

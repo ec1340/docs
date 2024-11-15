@@ -30,32 +30,37 @@ In order to use our API you need to get your `ascent-api-key` first. This will b
 ## Molecule Design
 Generate molecule designs with a simple request like the following Python example:
 
+### Request Body
 
-## SMILES
+#### smiles
 
-field | description
---- | ---
-smiles | The SMILES representation of the molecule to be designed
-target_props | The properties to optimize for (one or more of `MolLogP`, `TPSA`, `ExactMolWt`, `qed`)
-target_changes | The number of changes to make to the molecule (`[1]` = increase, `[-1]` = decrease)
+The SMILES representation of the molecule to be designed
+
+#### changes 
+
+The properties to optimize for (one or more of `['qed', 'TPSA', 'MolLogP', 'ExactMolWt']`).
+
+**note:** `changes` is a dictionary with the keys being the properties to optimize for and the values being `['increase', 'decrease']`
 
 ```python
 import requests
 
-url = "https://api.ascentbio.xyz/v1/design"
+url = "https://ascentbio--ab-design-apiv3-01-design-inference.modal.run"
 
 headers = {
   "Content-Type": "application/json",
-  "ascent-api-key": "<ascent-api-key>"
+  "ascent-api-key": "YOUR_API_KEY"
 }
 
 data = {
     "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
-    "target_props": ["TPSA"],
-    "target_changes": [1]
-    "model_id": "ascentbio-v1-base-large",
+    "changes": {"qed": "increase"}
 }
 
 response = requests.post(url, json=data, headers=headers)
+
+print(response.status_code)
+print(response.json())
 ```
+
 

@@ -1,0 +1,27 @@
+---
+title: 'Properties'
+description: 'Properties supported by the Ascent Bio API'
+---
+
+## ascentbio-v1-base-large
+This is the default model used in the design endpoint.
+
+### Properties
+#### QED
+QED stands for quantitative estimation of drug-likeness and the concept was for the first time introduced by Richard Bickerton and coworkers [1]. The empirical rationale of the QED measure reflects the underlying distribution of molecular properties including molecular weight, logP, topological polar surface area, number of hydrogen bond donors and acceptors, the number of aromatic rings and rotatable bonds, and the presence of unwanted chemical functionalities.
+
+#### MolLogP
+
+The Wildman-Crippen method for calculating LogP values is an atom-based approach described in their 1999 paper. 
+The method classifies atoms into 68 predefined atom types based on their immediate chemical environment, considering factors like neighboring atoms, aromaticity, and bonding. 
+Each atom type is associated with a specific contribution to the molecule's overall LogP. The LogP of a molecule is calculated as the sum of the contributions of its constituent atoms. The Wildman-Crippen method is known for its simplicity, speed, and reasonable accuracy. It doesn't require correction factors, unlike some fragmental methods4.
+While originally developed for small organic molecules, this method has been widely applied in drug discovery and other fields of chemistry.
+This atom-based approach provides a quick and reliable estimate of a molecule's lipophilicity, which is crucial for predicting various pharmacokinetic properties in drug design and development.
+
+
+#### TPSA
+The Topological Polar Surface Area (TPSA) descriptor in RDKit calculates the sum of surface contributions from polar atoms (primarily oxygen and nitrogen) in a molecule, based on the method by Ertl et al.  TPSA serves as a crucial descriptor in medicinal chemistry and drug discovery, particularly for predicting properties like drug absorption and blood-brain barrier penetration.
+
+
+#### ExactMolWt
+ExactMolWt differs from other molecular weight calculations in RDKit (like MolWt) by using exact atomic weights rather than averages. The function is sensitive to isotopic labeling, with deuterated compounds having different values than non-deuterated ones. While fast to compute and suitable for large-scale calculations, ExactMolWt may give slightly different results for the same molecule if represented by different SMILES strings (isomeric vs. non-isomeric) due to isotope and stereochemistry handling. Despite these limitations, it remains a valuable tool in computational chemistry, particularly for mass spectrometry applications where precise molecular weights are crucial for compound identification and analysis.
