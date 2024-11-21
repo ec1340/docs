@@ -33,6 +33,10 @@
     {
       "name": "API Reference",
       "url": "api-reference"
+    },
+    {
+      "name": "Reference",
+      "url": "reference"
     }
   ],
   "navigation": [
@@ -45,7 +49,14 @@
     {
       "group": "Guides",
       "pages": [
-        "user-guides/optimization-of-tpsa"
+        "user-guides/optimization-of-tpsa",
+        "user-guides/multiprop"
+      ]
+    },
+    {
+      "group": "Reference",  
+      "pages": [
+        "reference/properties"
       ]
     },
     {
@@ -55,13 +66,7 @@
       ]
     },
     {
-      "group": "Design",
-      "pages": [
-        "api-reference/properties"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
+      "group": "Endpoints",
       "pages": [
         "api-reference/endpoint/design"
       ]

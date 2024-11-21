@@ -1,5 +1,4 @@
 ---
-openapi: post design
 description: "An API for fast molecule design"
 ---
 
@@ -21,26 +20,31 @@ Our model enables fast, multi-property optimization compared to many off-the-she
 
 ---
 
-
-# Quick Start
+## Molecule Design
+Generate molecule designs with a simple request.
 
 ### Authentication
 In order to use our API you need to get your `ascent-api-key` first. This will be available in your profile settings. 
 
-## Molecule Design
-Generate molecule designs with a simple request like the following Python example:
 
 ### Request Body
 
 #### smiles
 
-The SMILES representation of the molecule to be designed
+The SMILES representation of the molecule to be designed.
 
 #### changes 
 
 The properties to optimize for (one or more of `['qed', 'TPSA', 'MolLogP', 'ExactMolWt']`).
 
-**note:** `changes` is a dictionary with the keys being the properties to optimize for and the values being `['increase', 'decrease']`
+**note:** `changes` is a dictionary with the keys being the properties to optimize for and the values being `['increase', 'decrease']`.
+
+#### model
+
+The specific model to use for molecule design. This allows you to select different models based on your requirements.
+We currently support `ascentbio-v1-base-large`
+
+### Example Request
 
 ```python
 import requests
@@ -54,7 +58,8 @@ headers = {
 
 data = {
     "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
-    "changes": {"qed": "increase"}
+    "changes": {"qed": "increase"},
+    "model": "ascentbio-v1-base-large"  # Specify the model to use
 }
 
 response = requests.post(url, json=data, headers=headers)
@@ -62,5 +67,3 @@ response = requests.post(url, json=data, headers=headers)
 print(response.status_code)
 print(response.json())
 ```
-
-
