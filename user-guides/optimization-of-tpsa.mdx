@@ -55,9 +55,7 @@ headers = {
 }
 data = {
     "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
-    "target_props": ["TPSA"],
-    "target_changes": [1],  # Increase TPSA; use [-1] to decrease TPSA
-    "model_id": "ascentbio-v1-base-large"
+    "changes": {"TPSA": "increase"}
 }
 
 ```
