@@ -4,9 +4,19 @@ description: 'Properties supported by the Ascent Bio API'
 ---
 
 ## ascentbio-v1-base-large
+<Tip>
 This is the default model used in the design endpoint.
+</Tip>
 
-### Properties
+| Property | Description | Range | Typical Values |
+|----------|-------------|--------|----------------|
+| QED | Quantitative Estimation of Drug-likeness | 0-1 | >0.6 considered drug-like |
+| MolLogP | Wildman-Crippen LogP| No fixed range | 0-5 for most drugs |
+| TPSA | Topological Polar Surface Area | ≥0 Å² | 20-140 Å² for oral drugs |
+| ExactMolWt | Exact molecular weight | >0 g/mol | 160-500 g/mol for most drugs |
+
+
+### Detailed Properties
 #### QED
 QED stands for quantitative estimation of drug-likeness and the concept was for the first time introduced by Richard Bickerton and coworkers [1]. The empirical rationale of the QED measure reflects the underlying distribution of molecular properties including molecular weight, logP, topological polar surface area, number of hydrogen bond donors and acceptors, the number of aromatic rings and rotatable bonds, and the presence of unwanted chemical functionalities.
 

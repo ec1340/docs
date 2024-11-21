@@ -5,7 +5,7 @@
     "dark": "/logo/ab_dark.svg",
     "light": "/logo/ab_light.svg"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "favicon.svg",
   "colors": {
     "primary": "#0D9373",
     "light": "#07C983",
@@ -31,12 +31,12 @@
       "url": "user-guides"
     },
     {
-      "name": "API Reference",
+      "name": "API Docs",
       "url": "api-reference"
     },
     {
       "name": "Reference",
-      "url": "reference"
+      "url": "property-reference"
     }
   ],
   "navigation": [
@@ -54,9 +54,9 @@
       ]
     },
     {
-      "group": "Reference",  
+      "group": "Property Reference",  
       "pages": [
-        "reference/properties"
+        "property-reference/properties"
       ]
     },
     {

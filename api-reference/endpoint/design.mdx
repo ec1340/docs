@@ -1,5 +1,6 @@
 ---
 description: "An API for fast molecule design"
+openapi: "openapi2.json POST /design"
 ---
 
 
@@ -26,6 +27,8 @@ Generate molecule designs with a simple request.
 ### Authentication
 In order to use our API you need to get your `ascent-api-key` first. This will be available in your profile settings. 
 
+### Endpoint
+`https://ascentbio--ab-design-apiv4-01-inference-dev.modal.run/design`
 
 ### Request Body
 
@@ -49,7 +52,7 @@ We currently support `ascentbio-v1-base-large`
 ```python
 import requests
 
-url = "https://ascentbio--ab-design-apiv3-01-design-inference.modal.run"
+url = "https://ascentbio--ab-design-apiv4-01-inference-dev.modal.run/design"
 
 headers = {
   "Content-Type": "application/json",
