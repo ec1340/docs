@@ -1,0 +1,133 @@
+---
+title: 'Faraday'
+description: 'AI Scientist'
+icon: 'book'
+---
+
+# Tutorials
+
+This section of Faraday’s documentation walks you through the practical steps to get started. Whether you're exploring Faraday for the first time or diving into specific use cases, these tutorials will guide you through making the most of the platform.
+
+## About Faraday
+
+Faraday is aiming to be your most capable co-worker to accelerate your Target-to-Candidate Workflows.
+
+Our AI-powered drug discovery platform streamlines tasks ranging from literature mining to molecular optimization. With a natural-language interface, you can interact directly with Faraday through our web-based chat interface. Unlike general-purpose LLMs, Faraday goes beyond simple search and information retrieval: it has a deeper understanding of biomolecules and chemical data, and it can leverage specialized computational tools to actively solve problems and accelerate your workflows.
+
+Simply type your request—such as identifying drug targets, analyzing molecules, or generating new candidates—and Faraday’s proprietary model will:
+
+- Interpret your prompt
+- Break it into logical steps
+- Select the appropriate tools
+- Execute the necessary code
+- Deliver the results
+
+In addition to receiving answers and next-step suggestions, you can also view the reasoning process by clicking ‘Thought’, and access the code executed by clicking ‘Code’, and see the tool being used by clicking ‘Tool’.
+
+## Account
+
+Faraday is currently in private alpha and you are viewing an early version. If you’re interested in trying out Faraday but haven’t had access yet or want to invite a friend to try, please sign up for the waitlist here.
+
+As an early adopter, your feedback is invaluable to us. We encourage you to share any feedback or suggestions you may have often and early by scheduling a demo meeting with our team.
+
+
+
+
+## Starting Point
+
+There are three primary ways to begin exploring Faraday:
+
+### 1. Ask Faraday an Open-Ended Question
+
+Use plain language to ask Faraday to generate a molecular starting point or explore publicly available literature, biological or chemical data.
+
+**Sample prompts:**
+
+- Design improved KRAS G12C inhibitors based on sotorasib.
+- What are the drug targets for Alzheimer’s disease?
+
+### 2. Upload Your Own Files
+
+If you have specific data, molecules, or documents you’d like Faraday to analyze, you can upload them directly into the platform or copy the smilestrings of the molecules to the chatbox.
+
+**Accepted formats**: `.pdf`, `.csv`, `.txt`
+
+**Sample prompt**:  
+Analyze this compound [insert SMILES string] targeting KRAS G12C, and suggest optimizations to enhance its drug-likeness.
+
+### 3. Try with Sample Documents
+
+We’ve prepared a set of sample documents to help you quickly understand what Faraday can do.
+
+**Sample dataset 1**:  
+**Published Kinase Inhibitor Set 2: PKIS2 dataset.xlsx**  
+**Source**: Drewry, David H., et al. "Progress towards a public chemogenomic set for protein kinases and a call for contributions." *PloS one* 12.8 (2017): e0181585.  
+**Description**: Composed of 645 small molecule inhibitors representing 86 diverse chemotypes that were published by medicinal chemists at GlaxoSmithKline, Pfizer, and Takeda. PKIS and PKIS2 have only nine chemotypes in common.
+
+**Sample dataset 2**:  
+**ADME pub set: ADME_public_set_3521.csv**  
+**Source**: Fang, Cheng, et al. "Prospective validation of machine learning algorithms for absorption, distribution, metabolism, and excretion prediction: An industrial perspective." *Journal of Chemical Information and Modeling* 63.11 (2023): 3263-3274.  
+**Description**: A collection of 3521 diverse compounds selected from commercially available compound libraries (i.e. Enamine, eMolecules, WuXi LabNetwork, Mcule) and tested against six ADME in vitro assays using the same experimental conditions. The file contains the compound SMILES, vendor and vendor ID, and the experimental log(properties) for six endpoints: HLM, RLM, Solubility, MDR1-MDCK ER, hPPB, and rPPB.
+
+Once uploaded, you can ask Faraday to perform a variety of tasks using the content in these documents.
+
+
+
+
+
+## Core Capabilities (continuously evolving)
+
+### Scraping Publications & Patents
+
+Automatically extract structured insights from unstructured scientific text (e.g., biorxiv, medrxiv, chemrxiv).  
+**Note**: Patent search and patentability evaluation functionality is currently in development.
+
+**Use case example**: [https://youtu.be/C1DVxFHXH6A](https://youtu.be/C1DVxFHXH6A)
+
+### Basic Molecular Properties
+
+Calculate foundational properties like molecular weight (MW), logP, hydrogen bond donors/acceptors, rotatable bonds, TPSA, Lipinski rule violations, overall Lipinski compliance, etc.
+
+**Use case example**: [https://youtu.be/ehC6sKqOGqk](https://youtu.be/ehC6sKqOGqk)
+
+### ADMET Alerts
+
+Faraday includes a built-in ADMET structural alert filter that flags undesirable substructures associated with toxicity, poor metabolism, or assay interference — helping you focus on high-quality candidates early.
+
+**Use case example**: [https://youtu.be/l8AaNUyJGVs](https://youtu.be/l8AaNUyJGVs)
+
+### Molecule Optimization
+
+Faraday helps you generate novel molecules with improved drug-like properties using multi-objective optimization.  
+Currently supported properties include:
+
+- QED – Quantitative Estimate of Drug-likeness
+- TPSA – Topological Polar Surface Area
+- MolLogP – Lipophilicity
+- ExactMolWt – Molecular weight
+
+**Use case example**: [https://youtu.be/ouh2szTcu38](https://youtu.be/ouh2szTcu38)
+
+### Molecular Docking
+
+Faraday can handle docking for you with DiffDock and gnina — no manual setup required.
+
+**Use case example**: 
+Try a simple prompt like:  
+`Dock [SMILES strings or molecule names] to [target name]`
+
+Faraday will take care of the rest.
+
+### Controlled Data Generation
+
+Generate a user-defined number of novel molecules starting from any valid, drug-like structure(s). Faraday supports SAR exploration, analog generation, library expansion, and scaffold hopping.
+
+**Use case example**: [https://youtu.be/Ss9mXzUhG-o](https://youtu.be/Ss9mXzUhG-o)
+
+## Confidentiality and Security Commitment
+
+We understand that confidentiality and security are critical in drug development. At Ascent Bio, we take rigorous measures to protect your proprietary information and ensure your data remains secure.
+
+We do not disclose any confidential data to third parties and will never use your data to train machine learning models without your explicit permission.
+
+You retain full ownership of your intellectual property and all designs generated through our platform.

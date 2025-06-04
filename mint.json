@@ -17,12 +17,16 @@
   },
   "topbarLinks": [
     {
+      "name": "Homepage",
+      "url": "https://ascentbio.xyz"
+    },
+    {
       "name": "Support",
       "url": "mailto:contact@ascentbio.xyz"
     }
   ],
   "topbarCtaButton": {
-    "name": "Home",
+    "name": "Platform",
     "url": "https://platform.ascentbio.xyz"
   },
   "tabs": [
@@ -44,17 +48,23 @@
       "group": "Get Started",
       "pages": [
         "introduction",
-        "quickstart"      ]
+        "faraday"
+      ]
     },
     {
       "group": "Guides",
       "pages": [
-        "user-guides/optimization-of-tpsa",
-        "user-guides/multiprop"
+        "user-guides/faraday",
+        "user-guides/faraday-literature",
+        "user-guides/faraday-molprops",
+        "user-guides/faraday-admet",
+        "user-guides/faraday-molopt",
+        "user-guides/faraday-docking",
+        "user-guides/faraday-molgen"
       ]
     },
     {
-      "group": "Property Reference",  
+      "group": "API Reference",  
       "pages": [
         "property-reference/properties"
       ]
