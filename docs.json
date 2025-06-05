@@ -12,12 +12,27 @@
       "light": "#07C983",
       "dark": "#0D9373"
     },
+    "navbar": {
+        "links": [
+            {
+                "label": "Homepage",
+                "href": "https://ascentbio.xyz"
+            }
+        ],
+        "primary": 
+            {
+                "label": "Platform",
+                "href": "https://platform.ascentbio.xyz",
+                "type": "button"
+            }
+    },
     "navigation": {
         "tabs": [
             {
                 "tab": "Welcome",
+                "icon": "circle",
                 "pages": [
-                    "index"
+                    "home"
                  ]
             },
             {
