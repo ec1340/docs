@@ -1,0 +1,74 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Ascent Bio",
+  "logo": {
+    "dark": "/logo/ab_dark.svg",
+    "light": "/logo/ab_light.svg"
+  },
+  "favicon": "/logo/ascent_blk_onlylogo.svg",
+  "colors": {
+    "primary": "#0D9373",
+    "light": "#07C983",
+    "dark": "#0D9373",
+    "anchors": {
+      "from": "#0D9373",
+      "to": "#07C983"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Homepage",
+      "url": "https://ascentbio.xyz"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Platform",
+    "url": "https://platform.ascentbio.xyz"
+  },
+  "tabs": [
+    {
+      "name": "User Guides",
+      "url": "user-guides"
+    },
+    {
+      "name": "API Docs",
+      "url": "api-reference"
+    },
+    {
+      "name": "Reference",
+      "url": "property-reference"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Home",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "group": "Get Started",
+      "pages": [
+        "introduction/introduction",
+        "introduction/faraday"
+      ]
+    },
+    {
+      "group": "Guides",
+      "pages": [
+        "user-guides/faraday",
+        "user-guides/faraday-literature",
+        "user-guides/faraday-molprops",
+        "user-guides/faraday-admet",
+        "user-guides/faraday-molopt",
+        "user-guides/faraday-docking",
+        "user-guides/faraday-molgen"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "x": "https://x.com/ascentbio",
+    "github": "https://github.com/AscentBio",
+    "linkedin": "https://www.linkedin.com/company/ascent-bio/"
+  }
+}

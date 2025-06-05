@@ -1,0 +1,60 @@
+{
+    "$schema": "https://mintlify.com/schema.json",
+    "name": "Ascent Bio",
+    "theme": "mint",  
+    "logo": {
+      "dark": "/logo/ab_dark.svg",
+      "light": "/logo/ab_light.svg"
+    },
+    "favicon": "/logo/ascent_blk_onlylogo.svg",
+    "colors": {
+      "primary": "#0D9373",
+      "light": "#07C983",
+      "dark": "#0D9373"
+    },
+    "navigation": {
+        "tabs": [
+            {
+                "tab": "Welcome",
+                "pages": [
+                    "index"
+                 ]
+            },
+            {
+                "tab": "Introduction",
+                "groups": [
+                    {
+                        "group": "Introduction",
+                        "pages": [
+                            "introduction/introduction"                        ]
+                    }
+                ]
+            },
+            {
+                "tab": "Guides",
+                "groups": [
+                    {
+                        "group": "User Guides",
+                        "pages": [
+                            "user-guides/faraday",
+                            "user-guides/faraday-admet",
+                            "user-guides/faraday-docking",
+                            "user-guides/faraday-literature",
+                            "user-guides/faraday-molgen",
+                            "user-guides/faraday-molprops",
+                            "user-guides/faraday-molopt"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "footer": {
+        "socials": {
+            "x": "https://x.com/ascentbio",
+            "github": "https://github.com/AscentBio",
+            "linkedin": "https://www.linkedin.com/company/ascent-bio/"
+        }
+    }
+}
+  
